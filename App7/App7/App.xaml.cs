@@ -1,11 +1,11 @@
 ﻿using App7.locat;
-using CommonServiceLocator;
+//using CommonServiceLocator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Unity;
-using Unity.ServiceLocation;
+//using Unity;
+//using Unity.ServiceLocation;
 using Xamarin.Forms;
 
 namespace App7
@@ -18,16 +18,16 @@ namespace App7
 
             //var textToSpeach = DependencyService.Get<ITextToSpeech>();
 
-            var unityContainer = new UnityContainer();
-            // register dependencies
-            unityContainer.RegisterType<IProductsService, ProductsService>();
-            //unityContainer.RegisterInstance(typeof(ITextToSpeech), textToSpeech);
-            unityContainer.RegisterInstance(typeof(ProductsViewModel));//optional
+            //var unityContainer = new UnityContainer();
+            //// register dependencies
+            //unityContainer.RegisterType<IProductsService, ProductsService>();
+            ////unityContainer.RegisterInstance(typeof(ITextToSpeech), textToSpeech);
+            //unityContainer.RegisterInstance(typeof(ProductsViewModel));//optional
 
-            var unityServiceLocator = new UnityServiceLocator(unityContainer);
-            ServiceLocator.SetLocatorProvider(() => unityServiceLocator);
+            //var unityServiceLocator = new UnityServiceLocator(unityContainer);
+            //ServiceLocator.SetLocatorProvider(() => unityServiceLocator);
 
-            //MainPage = new NavigationPage(new ProductsPage());
+            MainPage = new NavigationPage(new ProductsPage());
         }
 
         protected override void OnStart()

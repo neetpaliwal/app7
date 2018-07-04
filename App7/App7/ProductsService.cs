@@ -8,6 +8,7 @@ namespace App7
     {
         IEnumerable<Product> Getproducts();
     }
+
     public class ProductsService : IProductsService
     {
         public IEnumerable<Product> Getproducts()
